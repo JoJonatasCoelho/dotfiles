@@ -1,0 +1,10 @@
+{
+    "languageserver": {
+
+    },
+    "snippets.ultisnips.pythonPrompt": false,
+    "suggest.noselect": false,
+    "suggest.enablePreview": true
+
+
+}
