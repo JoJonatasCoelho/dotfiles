@@ -2,6 +2,11 @@
 - Nvim
 
 # Depedencies
+virutal env
+```
+python3 -m venv ~/.config/nvim/env
+```
+
 - pip
 ```
 apt install python3-pip
