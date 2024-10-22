@@ -23,6 +23,7 @@ call plug#end()
 
 " Global Sets"
 syntax on " Enable syntax highlight
+let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
 set nu               " Enable line numbers
 set tabstop=4        " Show existing tab with 4 spaces width
 set softtabstop=4    " Show existing tab with 4 spaces width
