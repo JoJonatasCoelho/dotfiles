@@ -1,11 +1,29 @@
 {
     "languageserver": {
-
+        "python": {
+            "command": "pyright-langserver",
+            "args": ["--stdio"],
+            "filetypes": ["python"],
+            "settings": {
+                "python.analysis.typeCheckingMode": "basic",
+                "python.pythonPath": "/home/john/.config/nvim/env/bin/python",
+                "python.jediEnabled": false,
+                "pyright.disableOrganizeImports": false,
+                "pyright.autoImportCompletions": true,
+                "pyright.useLibraryCodeForTypes": true,
+                "pyright.ignore": [
+                    "**/node_modules/**",
+                    "**/__pycache__/**"
+                ]
+            }
+        },
+        "clangd": {
+      "command": "clangd",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": ["compile_commands.json", ".vim/", ".git/", ".hg/"]
     },
     "snippets.ultisnips.pythonPrompt": false,
     "suggest.noselect": false,
-    "suggest.enablePreview": true,
-    "python.pythonPath": "~/.config/nvim/env/bin/python"
-
-
+    "suggest.enablePreview": true
 }
+

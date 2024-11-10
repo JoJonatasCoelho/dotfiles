@@ -19,10 +19,7 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-
-
 " Global Sets"
-syntax on " Enable syntax highlight
 let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
 set nu               " Enable line numbers
 set tabstop=4        " Show existing tab with 4 spaces width
@@ -66,11 +63,6 @@ map <C-l> <C-w>l
 
 
 " Themes
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
 
 let g:sonokai_style = 'andromeda'
 let g:sonokai_enable_italic = 1
@@ -79,10 +71,8 @@ let g:sonokai_diagnostic_line_highlight = 1
 let g:sonokai_current_word = 'bold'
 colorscheme sonokai
 
-if (has("nvim")) "Transparent background. Only for nvim
-    highlight Normal guibg=NONE ctermbg=NONE
-    highlight EndOfBuffer guibg=NONE ctermbg=NONE
-endif
+highlight Normal guibg=NONE ctermbg=NONE
+highlight EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 
@@ -199,6 +189,8 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('doHover')
+
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
