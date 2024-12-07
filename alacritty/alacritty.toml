@@ -1,0 +1,15 @@
+live_config_reload = true
+[window]
+    opacity = 0.6
+    blur = true
+    title = "Dead"
+    decorations_theme_variant = "Dark"
+    padding = { x = 5 , y = 5}
+
+[font]
+ #   normal = { family = "FantasqueSansM Nerd Font Mono 11pt", style = "Regular" }
+    builtin_box_drawing = true
+    size = 11
+
+[mouse]
+    hide_when_typing = true
